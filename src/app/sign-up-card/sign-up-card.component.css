@@ -41,3 +41,16 @@ input {
     display: flex;
     justify-content: flex-end;
 }
+
+.error {
+    padding-top: 8px;
+}
+
+.error:empty {
+    padding-top: 0;
+}
+
+.header {
+    font-weight: 300;
+    font-size: 2em;
+}

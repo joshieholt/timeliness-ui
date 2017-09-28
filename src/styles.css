@@ -17,7 +17,7 @@ body, input, textarea, select button {
     font-family: 'Roboto', sans-serif;
 }
 
-body, button {
+body, button, a.button {
     font-size: 14px;
 }
 
@@ -29,14 +29,20 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 1rem;
 }
 
-button {
+button, a.button {
     border: 0;
     background-color: transparent;
     text-transform: uppercase;
     color: #ff6d00;
+    padding: 4px 8px;
+    text-decoration: none;
 }
 
-button:active {
+button:active, a.button:hover {
+    background-color: #eeeeee;
+}
+
+button[disabled], a.button[disabled] {
     background-color: #eeeeee;
 }
 

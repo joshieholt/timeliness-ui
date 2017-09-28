@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Http } from '@angular/http';
+import { Router } from '@angular/router';
+
+import 'rxjs/add/operator/catch';
 
 @Component({
   selector: 'app-sign-up-card',
@@ -10,9 +13,9 @@ export class SignUpCardComponent implements OnInit {
 
   private username = '';
   private password = '';
-  private error = '';
+  private error: string;
 
-  constructor(private http: Http) { }
+  constructor(private http: Http, private router: Router) { }
 
   get disableButton() {
     return this.username.length === 0 ||
@@ -38,7 +41,7 @@ export class SignUpCardComponent implements OnInit {
       .subscribe(
         () => {
           this.error = '';
-          console.log('logged in');
+          this.router.navigate(['/main']);
         },
         e => {
           if (e.status === 401) {

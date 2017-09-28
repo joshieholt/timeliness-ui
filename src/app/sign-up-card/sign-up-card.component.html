@@ -1,6 +1,6 @@
 <div class="figure"><img src="/assets/clock.png"></div>
 <div class="content">
-
+  
   <h1>Sign up!</h1>
 
   <div class="error">{{ error }}</div>
@@ -13,5 +13,8 @@
   </div>
 </div>
 <div class="actions">
+
+  <a routerLink="/login" class="button">Cancel</a>
+  
   <button class="cta" [disabled]="disableButton" (click)="submitSignup()">Watch time</button>
 </div>
